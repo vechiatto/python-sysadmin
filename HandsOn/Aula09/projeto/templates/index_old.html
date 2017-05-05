@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+</html>
+<body>
+	<table border='1'>
+	<tr>
+		<td>Nome</td>
+		<td>Status</td>
+		
+	</tr>
+		{% for container in containers %}
+			<tr>
+				<td>{{ container.nome }}</td>
+				<td>	
+					{% if container.status == 'online' %}
+						<b>{{ container.status}}</b>
+					{% else %}
+					{{ container.status}}
+					{% endif %}
+
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
